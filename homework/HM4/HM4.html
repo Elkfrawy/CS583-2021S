@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>HM4</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>HM4</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11675,45 +13017,6 @@ ul.typeahead-list > li > a {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -11747,7 +13050,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11772,16 +13075,14 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Home-4:-Build-a-CNN-for-image-recognition.">Home 4: Build a CNN for image recognition.<a class="anchor-link" href="#Home-4:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-[Your-Name?]">Name: [Your-Name?]<a class="anchor-link" href="#Name:-[Your-Name?]">&#182;</a></h3>
+<h1 id="Home-4:-Build-a-CNN-for-image-recognition.">Home 4: Build a CNN for image recognition.<a class="anchor-link" href="#Home-4:-Build-a-CNN-for-image-recognition.">&#182;</a></h1><h3 id="Name:-Ayman-Elkfrawy">Name: Ayman Elkfrawy<a class="anchor-link" href="#Name:-Ayman-Elkfrawy">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-You-will-do-the-following:">0. You will do the following:<a class="anchor-link" href="#0.-You-will-do-the-following:">&#182;</a></h2><ol>
 <li><p>Read, complete, and run the code.</p>
@@ -11829,16 +13130,14 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.-Data-preparation">1. Data preparation<a class="anchor-link" href="#1.-Data-preparation">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.1.-Load-data">1.1. Load data<a class="anchor-link" href="#1.1.-Load-data">&#182;</a></h3>
 </div>
@@ -11846,13 +13145,19 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.datasets</span> <span class="k">import</span> <span class="n">cifar10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.datasets</span> <span class="kn">import</span> <span class="n">cifar10</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
 <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">cifar10</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">x_test</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">x_train</span> <span class="o">/</span> <span class="mf">255.0</span>
+<span class="n">x_test</span> <span class="o">=</span> <span class="n">x_test</span> <span class="o">/</span> <span class="mf">255.0</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of x_train: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;shape of y_train: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
@@ -11861,14 +13166,35 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;number of classes: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">-</span> <span class="n">numpy</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>shape of x_train: (50000, 32, 32, 3)
+shape of y_train: (50000, 1)
+shape of x_test: (10000, 32, 32, 3)
+shape of y_test: (10000, 1)
+number of classes: 10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.2.-One-hot-encode-the-labels">1.2. One-hot encode the labels<a class="anchor-link" href="#1.2.-One-hot-encode-the-labels">&#182;</a></h3><p>In the input, a label is a scalar in $\{0, 1, \cdots , 9\}$. One-hot encode transform such a scalar to a $10$-dim vector. E.g., a scalar <code>y_train[j]=3</code> is transformed to the vector <code>y_train_vec[j]=[0, 0, 0, 1, 0, 0, 0, 0, 0, 0]</code>.</p>
 <ol>
@@ -11883,12 +13209,14 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">to_one_hot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">num_class</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
-    <span class="o">&lt;</span><span class="n">fill</span> <span class="n">the</span> <span class="n">function</span><span class="o">&gt;</span>
-    <span class="o">...</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">num_class</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">y_value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
+      <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">y_value</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">return</span> <span class="n">result</span>
 
 <span class="n">y_train_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 <span class="n">y_test_vec</span> <span class="o">=</span> <span class="n">to_one_hot</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
@@ -11900,14 +13228,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">y_train_vec</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of y_train_vec: (50000, 10)
+Shape of y_test_vec: (10000, 10)
+[6]
+[0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Remark:-the-outputs-should-be">Remark: the outputs should be<a class="anchor-link" href="#Remark:-the-outputs-should-be">&#182;</a></h4><ul>
 <li>Shape of y_train_vec: (50000, 10)</li>
@@ -11920,8 +13268,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">1.3. Randomly partition the training set to training and validation sets<a class="anchor-link" href="#1.3.-Randomly-partition-the-training-set-to-training-and-validation-sets">&#182;</a></h3><p>Randomly partition the 50K training samples to 2 sets:</p>
 <ul>
@@ -11934,7 +13281,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="mi">50000</span><span class="p">)</span>
@@ -11953,14 +13300,34 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of y_val: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_val</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x_tr: (40000, 32, 32, 3)
+Shape of y_tr: (40000, 10)
+Shape of x_val: (10000, 32, 32, 3)
+Shape of y_val: (10000, 10)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="2.-Build-a-CNN-and-tune-its-hyper-parameters">2. Build a CNN and tune its hyper-parameters<a class="anchor-link" href="#2.-Build-a-CNN-and-tune-its-hyper-parameters">&#182;</a></h2><ol>
 <li>Build a convolutional neural network model</li>
@@ -11975,8 +13342,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Remark:">Remark:<a class="anchor-link" href="#Remark:">&#182;</a></h3><p>The following CNN is just an example. You are supposed to make <strong>substantial improvements</strong> such as:</p>
 <ul>
@@ -11990,64 +13356,340 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
-
-<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
-
-<span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Num GPUs Available: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">list_physical_devices</span><span class="p">(</span><span class="s1">&#39;GPU&#39;</span><span class="p">)))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Num GPUs Available:  1
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras</span> <span class="k">import</span> <span class="n">optimizers</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">MaxPooling2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">Activation</span><span class="p">,</span> <span class="n">BatchNormalization</span>
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras</span> <span class="kn">import</span> <span class="n">optimizers</span>
 
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-5</span> <span class="c1"># to be tuned!</span>
+<span class="k">def</span> <span class="nf">get_model</span><span class="p">():</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="c1"># model.add(MaxPooling2D((2, 2)))</span>
 
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
-              <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
-              <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="c1"># model.add(MaxPooling2D((2, 2)))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="c1"># model.add(MaxPooling2D((2, 2)))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Conv2D</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">MaxPooling2D</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Flatten</span><span class="p">())</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.4</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">BatchNormalization</span><span class="p">())</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Activation</span><span class="p">(</span><span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+
+    <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">1E-3</span> <span class="c1"># to be tuned!</span>
+
+    <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span>
+                  <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizers</span><span class="o">.</span><span class="n">RMSprop</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">),</span>
+                  <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">model</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">get_model</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Model: &#34;sequential_6&#34;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_31 (Conv2D)           (None, 32, 32, 32)        896       
+_________________________________________________________________
+batch_normalization_36 (Batc (None, 32, 32, 32)        128       
+_________________________________________________________________
+activation_41 (Activation)   (None, 32, 32, 32)        0         
+_________________________________________________________________
+conv2d_32 (Conv2D)           (None, 32, 32, 32)        9248      
+_________________________________________________________________
+batch_normalization_37 (Batc (None, 32, 32, 32)        128       
+_________________________________________________________________
+activation_42 (Activation)   (None, 32, 32, 32)        0         
+_________________________________________________________________
+max_pooling2d_16 (MaxPooling (None, 16, 16, 32)        0         
+_________________________________________________________________
+conv2d_33 (Conv2D)           (None, 16, 16, 64)        18496     
+_________________________________________________________________
+batch_normalization_38 (Batc (None, 16, 16, 64)        256       
+_________________________________________________________________
+activation_43 (Activation)   (None, 16, 16, 64)        0         
+_________________________________________________________________
+conv2d_34 (Conv2D)           (None, 16, 16, 64)        36928     
+_________________________________________________________________
+batch_normalization_39 (Batc (None, 16, 16, 64)        256       
+_________________________________________________________________
+activation_44 (Activation)   (None, 16, 16, 64)        0         
+_________________________________________________________________
+max_pooling2d_17 (MaxPooling (None, 8, 8, 64)          0         
+_________________________________________________________________
+conv2d_35 (Conv2D)           (None, 8, 8, 128)         73856     
+_________________________________________________________________
+batch_normalization_40 (Batc (None, 8, 8, 128)         512       
+_________________________________________________________________
+activation_45 (Activation)   (None, 8, 8, 128)         0         
+_________________________________________________________________
+conv2d_36 (Conv2D)           (None, 8, 8, 128)         147584    
+_________________________________________________________________
+batch_normalization_41 (Batc (None, 8, 8, 128)         512       
+_________________________________________________________________
+activation_46 (Activation)   (None, 8, 8, 128)         0         
+_________________________________________________________________
+max_pooling2d_18 (MaxPooling (None, 4, 4, 128)         0         
+_________________________________________________________________
+flatten_6 (Flatten)          (None, 2048)              0         
+_________________________________________________________________
+dropout_6 (Dropout)          (None, 2048)              0         
+_________________________________________________________________
+dense_11 (Dense)             (None, 128)               262272    
+_________________________________________________________________
+batch_normalization_42 (Batc (None, 128)               512       
+_________________________________________________________________
+activation_47 (Activation)   (None, 128)               0         
+_________________________________________________________________
+dense_12 (Dense)             (None, 10)                1290      
+_________________________________________________________________
+activation_48 (Activation)   (None, 10)                0         
+=================================================================
+Total params: 552,874
+Trainable params: 551,722
+Non-trainable params: 1,152
+_________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">keras_preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
+<span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="c1"># shear_range=0.2,</span>
+    <span class="c1"># zoom_range=0.5,</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">train_datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_tr</span><span class="p">)</span>
+
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">train_gen</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
+
+<span class="c1"># for sample in train_gen:</span>
+<span class="c1">#     print(sample.shape)</span>
+
+<span class="c1"># validation_dataget = ImageDataGenerator()</span>
+<span class="c1"># validation_gen = validation_dataget.flow(x_val, y_val)</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">train_gen</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">x_tr</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">batch_size</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+                              <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 1/50
+ - 211s - loss: 1.4019 - acc: 0.4938 - val_loss: 1.3377 - val_acc: 0.5444
+Epoch 2/50
+ - 66s - loss: 1.0131 - acc: 0.6398 - val_loss: 1.0755 - val_acc: 0.6442
+Epoch 3/50
+ - 65s - loss: 0.8788 - acc: 0.6890 - val_loss: 1.0191 - val_acc: 0.6561
+Epoch 4/50
+ - 54s - loss: 0.7995 - acc: 0.7210 - val_loss: 0.8971 - val_acc: 0.6965
+Epoch 5/50
+ - 53s - loss: 0.7402 - acc: 0.7406 - val_loss: 0.9292 - val_acc: 0.7095
+Epoch 6/50
+ - 52s - loss: 0.6927 - acc: 0.7582 - val_loss: 0.8710 - val_acc: 0.7223
+Epoch 7/50
+ - 51s - loss: 0.6566 - acc: 0.7708 - val_loss: 0.6745 - val_acc: 0.7630
+Epoch 8/50
+ - 53s - loss: 0.6254 - acc: 0.7836 - val_loss: 0.7168 - val_acc: 0.7562
+Epoch 9/50
+ - 52s - loss: 0.6059 - acc: 0.7890 - val_loss: 0.8186 - val_acc: 0.7428
+Epoch 10/50
+ - 52s - loss: 0.5816 - acc: 0.7995 - val_loss: 0.5779 - val_acc: 0.8013
+Epoch 11/50
+ - 51s - loss: 0.5624 - acc: 0.8045 - val_loss: 0.6352 - val_acc: 0.7942
+Epoch 12/50
+ - 101s - loss: 0.5435 - acc: 0.8114 - val_loss: 0.8079 - val_acc: 0.7338
+Epoch 13/50
+ - 51s - loss: 0.5269 - acc: 0.8192 - val_loss: 0.6855 - val_acc: 0.7760
+Epoch 14/50
+ - 51s - loss: 0.5185 - acc: 0.8218 - val_loss: 1.1620 - val_acc: 0.6784
+Epoch 15/50
+ - 51s - loss: 0.5030 - acc: 0.8243 - val_loss: 0.7183 - val_acc: 0.7807
+Epoch 16/50
+ - 52s - loss: 0.4918 - acc: 0.8314 - val_loss: 0.7303 - val_acc: 0.7694
+Epoch 17/50
+ - 52s - loss: 0.4794 - acc: 0.8350 - val_loss: 0.5629 - val_acc: 0.8133
+Epoch 18/50
+ - 53s - loss: 0.4687 - acc: 0.8403 - val_loss: 0.5867 - val_acc: 0.8086
+Epoch 19/50
+ - 51s - loss: 0.4625 - acc: 0.8410 - val_loss: 0.5522 - val_acc: 0.8281
+Epoch 20/50
+ - 60s - loss: 0.4470 - acc: 0.8469 - val_loss: 0.6198 - val_acc: 0.8125
+Epoch 21/50
+ - 217s - loss: 0.4409 - acc: 0.8475 - val_loss: 0.7253 - val_acc: 0.7968
+Epoch 22/50
+ - 64s - loss: 0.4402 - acc: 0.8483 - val_loss: 0.6011 - val_acc: 0.8210
+Epoch 23/50
+ - 53s - loss: 0.4268 - acc: 0.8539 - val_loss: 0.5470 - val_acc: 0.8342
+Epoch 24/50
+ - 51s - loss: 0.4213 - acc: 0.8565 - val_loss: 0.4716 - val_acc: 0.8457
+Epoch 25/50
+ - 52s - loss: 0.4215 - acc: 0.8573 - val_loss: 0.4680 - val_acc: 0.8438
+Epoch 26/50
+ - 52s - loss: 0.4074 - acc: 0.8611 - val_loss: 0.4982 - val_acc: 0.8339
+Epoch 27/50
+ - 51s - loss: 0.4019 - acc: 0.8624 - val_loss: 0.6308 - val_acc: 0.8008
+Epoch 28/50
+ - 52s - loss: 0.3967 - acc: 0.8659 - val_loss: 0.4986 - val_acc: 0.8408
+Epoch 29/50
+ - 51s - loss: 0.3983 - acc: 0.8633 - val_loss: 0.5298 - val_acc: 0.8394
+Epoch 30/50
+ - 51s - loss: 0.3907 - acc: 0.8651 - val_loss: 0.6923 - val_acc: 0.7888
+Epoch 31/50
+ - 51s - loss: 0.3838 - acc: 0.8694 - val_loss: 0.5594 - val_acc: 0.8301
+Epoch 32/50
+ - 52s - loss: 0.3874 - acc: 0.8683 - val_loss: 0.5125 - val_acc: 0.8425
+Epoch 33/50
+ - 106s - loss: 0.3745 - acc: 0.8715 - val_loss: 0.6326 - val_acc: 0.8230
+Epoch 34/50
+ - 50s - loss: 0.3713 - acc: 0.8717 - val_loss: 0.5622 - val_acc: 0.8212
+Epoch 35/50
+ - 51s - loss: 0.3697 - acc: 0.8736 - val_loss: 0.5591 - val_acc: 0.8408
+Epoch 36/50
+ - 51s - loss: 0.3703 - acc: 0.8750 - val_loss: 0.4243 - val_acc: 0.8634
+Epoch 37/50
+ - 52s - loss: 0.3600 - acc: 0.8777 - val_loss: 0.6120 - val_acc: 0.8215
+Epoch 38/50
+ - 51s - loss: 0.3549 - acc: 0.8783 - val_loss: 0.7026 - val_acc: 0.8085
+Epoch 39/50
+ - 51s - loss: 0.3515 - acc: 0.8773 - val_loss: 0.5224 - val_acc: 0.8452
+Epoch 40/50
+ - 54s - loss: 0.3511 - acc: 0.8800 - val_loss: 0.4959 - val_acc: 0.8518
+Epoch 41/50
+ - 144s - loss: 0.3470 - acc: 0.8827 - val_loss: 0.6352 - val_acc: 0.8238
+Epoch 42/50
+ - 50s - loss: 0.3478 - acc: 0.8810 - val_loss: 0.4714 - val_acc: 0.8477
+Epoch 43/50
+ - 50s - loss: 0.3419 - acc: 0.8841 - val_loss: 0.4621 - val_acc: 0.8623
+Epoch 44/50
+ - 51s - loss: 0.3380 - acc: 0.8824 - val_loss: 0.7565 - val_acc: 0.8063
+Epoch 45/50
+ - 51s - loss: 0.3307 - acc: 0.8881 - val_loss: 0.6689 - val_acc: 0.8121
+Epoch 46/50
+ - 51s - loss: 0.3366 - acc: 0.8834 - val_loss: 0.4754 - val_acc: 0.8551
+Epoch 47/50
+ - 51s - loss: 0.3287 - acc: 0.8862 - val_loss: 0.4416 - val_acc: 0.8626
+Epoch 48/50
+ - 117s - loss: 0.3204 - acc: 0.8902 - val_loss: 0.3918 - val_acc: 0.8811
+Epoch 49/50
+ - 124s - loss: 0.3202 - acc: 0.8908 - val_loss: 0.4687 - val_acc: 0.8624
+Epoch 50/50
+ - 51s - loss: 0.3229 - acc: 0.8895 - val_loss: 0.4455 - val_acc: 0.8609
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -12066,14 +13708,35 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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dBx66KHUqVOHl156iZLAI9Opp57K5MmT2Rn4H7hlyxaaNm1Ku3bteOONNwDYs2dP2XpTeyUSCCLd1KM9xW/e7L2PV44A9j/dh2rYEA4+2Hv7aDfvsWMj3xu8btLR7iWjRnkHlVE9lsNdd8GAAVBYCDff7J3QKmQBIkTEHy7FUTnU73//e2677TYGDRpUdlNOpQMPPJBnn32WoUOHcvzxx9OmTRuaNWtWYburr76aF198kQEDBrB69eqyXM7QoUM566yzyMnJoWfPnjzyyCMAvPTSSzz11FN0796d4447jh9//DHlaTfpFakTVioCQaSberSn+ERFerp/8snEb97PPpvYvSHWvaRCULlwH1xyCTRrBjNnwo03uh3mzUvNHyNZkSonauKruvWDqC62b9+uqqqlpaV61VVX6WOPPZbmFJVnv5H/Emm6GVyeSGueSC1qEn0F05DIOaJVOif690ibe+5xCQ80/NCdO1WPOkq1QwfVrVt9PTXWiql2e+yxx7RHjx569NFH68UXX1ypFkd+sN/IX4ne7JNpzZPoK9ZNPdFWO9Xuhp+Izz9XrVtX9eKLyy//9FPVOnVUx4719fQWIEy1Zr9RZH4290y2KWaqAkEqO7HVWLt3qx57rOohh6gGmpCXc9NN7o82d65vSbAAYaq12v4bJVrMk2i7+ERv6sFjJhJUUh0Iao0JE9wf6803vdcHi5rat/etqMkChKnWastvlGixSaIdvSKV0SfTmSuZYikLBAlauND9CJdeGn07n4uaLECYaq02/EaJVrymspjHKycR62YfTHMiFdtRTZ6set55qoHhX6q9BQvc07tfNm9WPfpo1XbtVP/739jbB4uann5aNS9PtagoZX9LCxCmWqupv1EqBnVLppgn0VesgeN8f+rftEm1WTOXmBUrfDhBir3wgkvrI4+k/tglJarPP++eDLKyVN95J779du50dRXh0bxLF9XTTlO99tqkk2QBIo0GDx6sb7/9drlljz/+uF511VVR91m0aJGqqp5++un6X48nDK/RYcNNnz5dV4T8h7zjjjt03rx5iSS/SqT7N0pGKgd1S7SYJ5XNPavE+PGuiARUH3wwzYmJ4b33XIsiUD377NQeOy9PtV8/d+wTTlD94ovE9t+1S3XxYtXp01WfeEL1hhtUhw9X7dNHtW/fpJNlASKNJk6cqJeGlTH2799f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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="3.-Train-(again)-and-evaluate-the-model">3. Train (again) and evaluate the model<a class="anchor-link" href="#3.-Train-(again)-and-evaluate-the-model">&#182;</a></h2><ul>
 <li>To this end, you have found the "best" hyper-parameters. </li>
@@ -12085,8 +13748,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.1.-Train-the-model-on-the-entire-training-set">3.1. Train the model on the entire training set<a class="anchor-link" href="#3.1.-Train-the-model-on-the-entire-training-set">&#182;</a></h3><p>Why? Previously, you used 40K samples for training; you wasted 10K samples for the sake of hyper-parameter tuning. Now you already know the hyper-parameters, so why not using all the 50K samples for training?</p>
 
@@ -12095,37 +13757,243 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Compile</span> <span class="n">your</span> <span class="n">model</span> <span class="n">again</span> <span class="p">(</span><span class="n">using</span> <span class="n">the</span> <span class="n">same</span> <span class="n">hyper</span><span class="o">-</span><span class="n">parameters</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">get_model</span><span class="p">()</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Model: &#34;sequential_7&#34;
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_37 (Conv2D)           (None, 32, 32, 32)        896       
+_________________________________________________________________
+batch_normalization_43 (Batc (None, 32, 32, 32)        128       
+_________________________________________________________________
+activation_49 (Activation)   (None, 32, 32, 32)        0         
+_________________________________________________________________
+conv2d_38 (Conv2D)           (None, 32, 32, 32)        9248      
+_________________________________________________________________
+batch_normalization_44 (Batc (None, 32, 32, 32)        128       
+_________________________________________________________________
+activation_50 (Activation)   (None, 32, 32, 32)        0         
+_________________________________________________________________
+max_pooling2d_19 (MaxPooling (None, 16, 16, 32)        0         
+_________________________________________________________________
+conv2d_39 (Conv2D)           (None, 16, 16, 64)        18496     
+_________________________________________________________________
+batch_normalization_45 (Batc (None, 16, 16, 64)        256       
+_________________________________________________________________
+activation_51 (Activation)   (None, 16, 16, 64)        0         
+_________________________________________________________________
+conv2d_40 (Conv2D)           (None, 16, 16, 64)        36928     
+_________________________________________________________________
+batch_normalization_46 (Batc (None, 16, 16, 64)        256       
+_________________________________________________________________
+activation_52 (Activation)   (None, 16, 16, 64)        0         
+_________________________________________________________________
+max_pooling2d_20 (MaxPooling (None, 8, 8, 64)          0         
+_________________________________________________________________
+conv2d_41 (Conv2D)           (None, 8, 8, 128)         73856     
+_________________________________________________________________
+batch_normalization_47 (Batc (None, 8, 8, 128)         512       
+_________________________________________________________________
+activation_53 (Activation)   (None, 8, 8, 128)         0         
+_________________________________________________________________
+conv2d_42 (Conv2D)           (None, 8, 8, 128)         147584    
+_________________________________________________________________
+batch_normalization_48 (Batc (None, 8, 8, 128)         512       
+_________________________________________________________________
+activation_54 (Activation)   (None, 8, 8, 128)         0         
+_________________________________________________________________
+max_pooling2d_21 (MaxPooling (None, 4, 4, 128)         0         
+_________________________________________________________________
+flatten_7 (Flatten)          (None, 2048)              0         
+_________________________________________________________________
+dropout_7 (Dropout)          (None, 2048)              0         
+_________________________________________________________________
+dense_13 (Dense)             (None, 128)               262272    
+_________________________________________________________________
+batch_normalization_49 (Batc (None, 128)               512       
+_________________________________________________________________
+activation_55 (Activation)   (None, 128)               0         
+_________________________________________________________________
+dense_14 (Dense)             (None, 10)                1290      
+_________________________________________________________________
+activation_56 (Activation)   (None, 10)                0         
+=================================================================
+Total params: 552,874
+Trainable params: 551,722
+Non-trainable params: 1,152
+_________________________________________________________________
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">Train</span> <span class="n">your</span> <span class="n">model</span> <span class="n">on</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">training</span> <span class="nb">set</span> <span class="p">(</span><span class="mi">50</span><span class="n">K</span> <span class="n">samples</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Use</span> <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">)</span> <span class="n">instead</span> <span class="n">of</span> <span class="p">(</span><span class="n">x_tr</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">Do</span> <span class="n">NOT</span> <span class="n">use</span> <span class="n">the</span> <span class="n">validation_data</span> <span class="n">option</span> <span class="p">(</span><span class="n">because</span> <span class="n">now</span> <span class="n">you</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">validation</span> <span class="n">data</span><span class="p">)</span><span class="o">&gt;</span>
-<span class="o">...</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_datagen</span> <span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
+    <span class="n">rotation_range</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+    <span class="n">width_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="n">height_shift_range</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
+    <span class="c1"># shear_range=0.2,</span>
+    <span class="c1"># zoom_range=0.5,</span>
+    <span class="n">horizontal_flip</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">train_datagen</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
+
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">64</span>
+<span class="n">train_gen</span> <span class="o">=</span> <span class="n">train_datagen</span><span class="o">.</span><span class="n">flow</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train_vec</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">)</span>
+
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span><span class="n">train_gen</span><span class="p">,</span> <span class="n">steps_per_epoch</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">/</span><span class="n">batch_size</span><span class="p">),</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 1/50
+ - 57s - loss: 1.3433 - acc: 0.5154
+Epoch 2/50
+ - 55s - loss: 0.9598 - acc: 0.6602
+Epoch 3/50
+ - 55s - loss: 0.8414 - acc: 0.7067
+Epoch 4/50
+ - 55s - loss: 0.7605 - acc: 0.7317
+Epoch 5/50
+ - 55s - loss: 0.7120 - acc: 0.7527
+Epoch 6/50
+ - 55s - loss: 0.6625 - acc: 0.7683
+Epoch 7/50
+ - 55s - loss: 0.6336 - acc: 0.7803
+Epoch 8/50
+ - 55s - loss: 0.6077 - acc: 0.7908
+Epoch 9/50
+ - 52s - loss: 0.5826 - acc: 0.7995
+Epoch 10/50
+ - 50s - loss: 0.5613 - acc: 0.8066
+Epoch 11/50
+ - 51s - loss: 0.5470 - acc: 0.8105
+Epoch 12/50
+ - 51s - loss: 0.5279 - acc: 0.8204
+Epoch 13/50
+ - 51s - loss: 0.5161 - acc: 0.8238
+Epoch 14/50
+ - 51s - loss: 0.5021 - acc: 0.8291
+Epoch 15/50
+ - 51s - loss: 0.4875 - acc: 0.8319
+Epoch 16/50
+ - 51s - loss: 0.4771 - acc: 0.8362
+Epoch 17/50
+ - 51s - loss: 0.4686 - acc: 0.8401
+Epoch 18/50
+ - 51s - loss: 0.4576 - acc: 0.8426
+Epoch 19/50
+ - 51s - loss: 0.4490 - acc: 0.8484
+Epoch 20/50
+ - 51s - loss: 0.4443 - acc: 0.8477
+Epoch 21/50
+ - 51s - loss: 0.4371 - acc: 0.8512
+Epoch 22/50
+ - 53s - loss: 0.4310 - acc: 0.8543
+Epoch 23/50
+ - 51s - loss: 0.4239 - acc: 0.8558
+Epoch 24/50
+ - 51s - loss: 0.4179 - acc: 0.8568
+Epoch 25/50
+ - 51s - loss: 0.4141 - acc: 0.8590
+Epoch 26/50
+ - 51s - loss: 0.4045 - acc: 0.8622
+Epoch 27/50
+ - 51s - loss: 0.3980 - acc: 0.8650
+Epoch 28/50
+ - 52s - loss: 0.3938 - acc: 0.8661
+Epoch 29/50
+ - 52s - loss: 0.3908 - acc: 0.8660
+Epoch 30/50
+ - 51s - loss: 0.3821 - acc: 0.8703
+Epoch 31/50
+ - 51s - loss: 0.3820 - acc: 0.8705
+Epoch 32/50
+ - 51s - loss: 0.3773 - acc: 0.8714
+Epoch 33/50
+ - 51s - loss: 0.3744 - acc: 0.8713
+Epoch 34/50
+ - 51s - loss: 0.3671 - acc: 0.8745
+Epoch 35/50
+ - 51s - loss: 0.3642 - acc: 0.8760
+Epoch 36/50
+ - 51s - loss: 0.3615 - acc: 0.8780
+Epoch 37/50
+ - 51s - loss: 0.3610 - acc: 0.8776
+Epoch 38/50
+ - 51s - loss: 0.3509 - acc: 0.8799
+Epoch 39/50
+ - 51s - loss: 0.3480 - acc: 0.8815
+Epoch 40/50
+ - 52s - loss: 0.3468 - acc: 0.8814
+Epoch 41/50
+ - 51s - loss: 0.3410 - acc: 0.8839
+Epoch 42/50
+ - 51s - loss: 0.3492 - acc: 0.8814
+Epoch 43/50
+ - 51s - loss: 0.3378 - acc: 0.8840
+Epoch 44/50
+ - 51s - loss: 0.3368 - acc: 0.8848
+Epoch 45/50
+ - 51s - loss: 0.3381 - acc: 0.8843
+Epoch 46/50
+ - 51s - loss: 0.3332 - acc: 0.8857
+Epoch 47/50
+ - 51s - loss: 0.3262 - acc: 0.8883
+Epoch 48/50
+ - 51s - loss: 0.3244 - acc: 0.8901
+Epoch 49/50
+ - 51s - loss: 0.3281 - acc: 0.8894
+Epoch 50/50
+ - 51s - loss: 0.3208 - acc: 0.8893
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="3.2.-Evaluate-the-model-on-the-test-set">3.2. Evaluate the model on the test set<a class="anchor-link" href="#3.2.-Evaluate-the-model-on-the-test-set">&#182;</a></h3><p>Do NOT used the test set until now. Make sure that your model parameters and hyper-parameters are independent of the test set.</p>
 
@@ -12134,15 +14002,34 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_and_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test_vec</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss_and_acc</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test_vec</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;loss = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">loss_and_acc</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">loss_and_acc</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>loss = 0.5388658176898956
+accuracy = 0.8544999957084656
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
