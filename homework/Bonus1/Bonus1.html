@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Bonus1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+
+<title>Bonus1</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
 
 <style type="text/css">
     /*!
@@ -199,7 +204,6 @@ th {
   *:before,
   *:after {
     background: transparent !important;
-    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -6744,15 +6748,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6809,6 +6813,19 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
+.fa-pull-left {
+  float: left;
+}
+.fa-pull-right {
+  float: right;
+}
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6824,6 +6841,10 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
+}
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6846,31 +6867,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7355,6 +7376,7 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
+.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7367,6 +7389,7 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
+.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8004,7 +8027,8 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before {
+.fa-gittip:before,
+.fa-gratipay:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8108,7 +8132,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper:before {
+.fa-pied-piper-pp:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8234,6 +8258,7 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
+.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8247,6 +8272,8 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8414,6 +8441,657 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
+}
+.fa-buysellads:before {
+  content: "\f20d";
+}
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+.fa-dashcube:before {
+  content: "\f210";
+}
+.fa-forumbee:before {
+  content: "\f211";
+}
+.fa-leanpub:before {
+  content: "\f212";
+}
+.fa-sellsy:before {
+  content: "\f213";
+}
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+.fa-skyatlas:before {
+  content: "\f216";
+}
+.fa-cart-plus:before {
+  content: "\f217";
+}
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+.fa-diamond:before {
+  content: "\f219";
+}
+.fa-ship:before {
+  content: "\f21a";
+}
+.fa-user-secret:before {
+  content: "\f21b";
+}
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+.fa-street-view:before {
+  content: "\f21d";
+}
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+.fa-venus:before {
+  content: "\f221";
+}
+.fa-mars:before {
+  content: "\f222";
+}
+.fa-mercury:before {
+  content: "\f223";
+}
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "\f224";
+}
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+.fa-venus-double:before {
+  content: "\f226";
+}
+.fa-mars-double:before {
+  content: "\f227";
+}
+.fa-venus-mars:before {
+  content: "\f228";
+}
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+.fa-neuter:before {
+  content: "\f22c";
+}
+.fa-genderless:before {
+  content: "\f22d";
+}
+.fa-facebook-official:before {
+  content: "\f230";
+}
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+.fa-whatsapp:before {
+  content: "\f232";
+}
+.fa-server:before {
+  content: "\f233";
+}
+.fa-user-plus:before {
+  content: "\f234";
+}
+.fa-user-times:before {
+  content: "\f235";
+}
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+.fa-viacoin:before {
+  content: "\f237";
+}
+.fa-train:before {
+  content: "\f238";
+}
+.fa-subway:before {
+  content: "\f239";
+}
+.fa-medium:before {
+  content: "\f23a";
+}
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "\f23b";
+}
+.fa-optin-monster:before {
+  content: "\f23c";
+}
+.fa-opencart:before {
+  content: "\f23d";
+}
+.fa-expeditedssl:before {
+  content: "\f23e";
+}
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "\f240";
+}
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "\f241";
+}
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "\f242";
+}
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "\f243";
+}
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "\f244";
+}
+.fa-mouse-pointer:before {
+  content: "\f245";
+}
+.fa-i-cursor:before {
+  content: "\f246";
+}
+.fa-object-group:before {
+  content: "\f247";
+}
+.fa-object-ungroup:before {
+  content: "\f248";
+}
+.fa-sticky-note:before {
+  content: "\f249";
+}
+.fa-sticky-note-o:before {
+  content: "\f24a";
+}
+.fa-cc-jcb:before {
+  content: "\f24b";
+}
+.fa-cc-diners-club:before {
+  content: "\f24c";
+}
+.fa-clone:before {
+  content: "\f24d";
+}
+.fa-balance-scale:before {
+  content: "\f24e";
+}
+.fa-hourglass-o:before {
+  content: "\f250";
+}
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "\f251";
+}
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "\f252";
+}
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "\f253";
+}
+.fa-hourglass:before {
+  content: "\f254";
+}
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "\f255";
+}
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "\f256";
+}
+.fa-hand-scissors-o:before {
+  content: "\f257";
+}
+.fa-hand-lizard-o:before {
+  content: "\f258";
+}
+.fa-hand-spock-o:before {
+  content: "\f259";
+}
+.fa-hand-pointer-o:before {
+  content: "\f25a";
+}
+.fa-hand-peace-o:before {
+  content: "\f25b";
+}
+.fa-trademark:before {
+  content: "\f25c";
+}
+.fa-registered:before {
+  content: "\f25d";
+}
+.fa-creative-commons:before {
+  content: "\f25e";
+}
+.fa-gg:before {
+  content: "\f260";
+}
+.fa-gg-circle:before {
+  content: "\f261";
+}
+.fa-tripadvisor:before {
+  content: "\f262";
+}
+.fa-odnoklassniki:before {
+  content: "\f263";
+}
+.fa-odnoklassniki-square:before {
+  content: "\f264";
+}
+.fa-get-pocket:before {
+  content: "\f265";
+}
+.fa-wikipedia-w:before {
+  content: "\f266";
+}
+.fa-safari:before {
+  content: "\f267";
+}
+.fa-chrome:before {
+  content: "\f268";
+}
+.fa-firefox:before {
+  content: "\f269";
+}
+.fa-opera:before {
+  content: "\f26a";
+}
+.fa-internet-explorer:before {
+  content: "\f26b";
+}
+.fa-tv:before,
+.fa-television:before {
+  content: "\f26c";
+}
+.fa-contao:before {
+  content: "\f26d";
+}
+.fa-500px:before {
+  content: "\f26e";
+}
+.fa-amazon:before {
+  content: "\f270";
+}
+.fa-calendar-plus-o:before {
+  content: "\f271";
+}
+.fa-calendar-minus-o:before {
+  content: "\f272";
+}
+.fa-calendar-times-o:before {
+  content: "\f273";
+}
+.fa-calendar-check-o:before {
+  content: "\f274";
+}
+.fa-industry:before {
+  content: "\f275";
+}
+.fa-map-pin:before {
+  content: "\f276";
+}
+.fa-map-signs:before {
+  content: "\f277";
+}
+.fa-map-o:before {
+  content: "\f278";
+}
+.fa-map:before {
+  content: "\f279";
+}
+.fa-commenting:before {
+  content: "\f27a";
+}
+.fa-commenting-o:before {
+  content: "\f27b";
+}
+.fa-houzz:before {
+  content: "\f27c";
+}
+.fa-vimeo:before {
+  content: "\f27d";
+}
+.fa-black-tie:before {
+  content: "\f27e";
+}
+.fa-fonticons:before {
+  content: "\f280";
+}
+.fa-reddit-alien:before {
+  content: "\f281";
+}
+.fa-edge:before {
+  content: "\f282";
+}
+.fa-credit-card-alt:before {
+  content: "\f283";
+}
+.fa-codiepie:before {
+  content: "\f284";
+}
+.fa-modx:before {
+  content: "\f285";
+}
+.fa-fort-awesome:before {
+  content: "\f286";
+}
+.fa-usb:before {
+  content: "\f287";
+}
+.fa-product-hunt:before {
+  content: "\f288";
+}
+.fa-mixcloud:before {
+  content: "\f289";
+}
+.fa-scribd:before {
+  content: "\f28a";
+}
+.fa-pause-circle:before {
+  content: "\f28b";
+}
+.fa-pause-circle-o:before {
+  content: "\f28c";
+}
+.fa-stop-circle:before {
+  content: "\f28d";
+}
+.fa-stop-circle-o:before {
+  content: "\f28e";
+}
+.fa-shopping-bag:before {
+  content: "\f290";
+}
+.fa-shopping-basket:before {
+  content: "\f291";
+}
+.fa-hashtag:before {
+  content: "\f292";
+}
+.fa-bluetooth:before {
+  content: "\f293";
+}
+.fa-bluetooth-b:before {
+  content: "\f294";
+}
+.fa-percent:before {
+  content: "\f295";
+}
+.fa-gitlab:before {
+  content: "\f296";
+}
+.fa-wpbeginner:before {
+  content: "\f297";
+}
+.fa-wpforms:before {
+  content: "\f298";
+}
+.fa-envira:before {
+  content: "\f299";
+}
+.fa-universal-access:before {
+  content: "\f29a";
+}
+.fa-wheelchair-alt:before {
+  content: "\f29b";
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+}
+.fa-blind:before {
+  content: "\f29d";
+}
+.fa-audio-description:before {
+  content: "\f29e";
+}
+.fa-volume-control-phone:before {
+  content: "\f2a0";
+}
+.fa-braille:before {
+  content: "\f2a1";
+}
+.fa-assistive-listening-systems:before {
+  content: "\f2a2";
+}
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "\f2a3";
+}
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "\f2a4";
+}
+.fa-glide:before {
+  content: "\f2a5";
+}
+.fa-glide-g:before {
+  content: "\f2a6";
+}
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "\f2a7";
+}
+.fa-low-vision:before {
+  content: "\f2a8";
+}
+.fa-viadeo:before {
+  content: "\f2a9";
+}
+.fa-viadeo-square:before {
+  content: "\f2aa";
+}
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+.fa-snapchat-ghost:before {
+  content: "\f2ac";
+}
+.fa-snapchat-square:before {
+  content: "\f2ad";
+}
+.fa-pied-piper:before {
+  content: "\f2ae";
+}
+.fa-first-order:before {
+  content: "\f2b0";
+}
+.fa-yoast:before {
+  content: "\f2b1";
+}
+.fa-themeisle:before {
+  content: "\f2b2";
+}
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "\f2b3";
+}
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "\f2b4";
+}
+.fa-handshake-o:before {
+  content: "\f2b5";
+}
+.fa-envelope-open:before {
+  content: "\f2b6";
+}
+.fa-envelope-open-o:before {
+  content: "\f2b7";
+}
+.fa-linode:before {
+  content: "\f2b8";
+}
+.fa-address-book:before {
+  content: "\f2b9";
+}
+.fa-address-book-o:before {
+  content: "\f2ba";
+}
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "\f2bb";
+}
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "\f2bc";
+}
+.fa-user-circle:before {
+  content: "\f2bd";
+}
+.fa-user-circle-o:before {
+  content: "\f2be";
+}
+.fa-user-o:before {
+  content: "\f2c0";
+}
+.fa-id-badge:before {
+  content: "\f2c1";
+}
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "\f2c2";
+}
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "\f2c3";
+}
+.fa-quora:before {
+  content: "\f2c4";
+}
+.fa-free-code-camp:before {
+  content: "\f2c5";
+}
+.fa-telegram:before {
+  content: "\f2c6";
+}
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "\f2c7";
+}
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "\f2c8";
+}
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "\f2c9";
+}
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "\f2ca";
+}
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "\f2cb";
+}
+.fa-shower:before {
+  content: "\f2cc";
+}
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "\f2cd";
+}
+.fa-podcast:before {
+  content: "\f2ce";
+}
+.fa-window-maximize:before {
+  content: "\f2d0";
+}
+.fa-window-minimize:before {
+  content: "\f2d1";
+}
+.fa-window-restore:before {
+  content: "\f2d2";
+}
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "\f2d3";
+}
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "\f2d4";
+}
+.fa-bandcamp:before {
+  content: "\f2d5";
+}
+.fa-grav:before {
+  content: "\f2d6";
+}
+.fa-etsy:before {
+  content: "\f2d7";
+}
+.fa-imdb:before {
+  content: "\f2d8";
+}
+.fa-ravelry:before {
+  content: "\f2d9";
+}
+.fa-eercast:before {
+  content: "\f2da";
+}
+.fa-microchip:before {
+  content: "\f2db";
+}
+.fa-snowflake-o:before {
+  content: "\f2dc";
+}
+.fa-superpowers:before {
+  content: "\f2dd";
+}
+.fa-wpexplorer:before {
+  content: "\f2de";
+}
+.fa-meetup:before {
+  content: "\f2e0";
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
 }
 /*!
 *
@@ -8694,6 +9372,10 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
+div.traceback-wrapper pre.traceback {
+  max-height: 600px;
+  overflow: auto;
+}
 /**
  * Primary styles
  *
@@ -8719,6 +9401,10 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -8750,13 +9436,16 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-@media (max-width: 991px) {
-  #ipython_notebook {
-    margin-left: 10px;
-  }
-}
 [dir="rtl"] #ipython_notebook {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="rtl"] #ipython_notebook.pull-left {
   float: right !important;
+  float: right;
+}
+.flex-spacer {
+  flex: 1;
 }
 #noscript {
   width: auto;
@@ -8791,8 +9480,14 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
+span#kernel_logo_widget {
+  margin: 0 10px;
+}
 span#login_widget {
   float: right;
+}
+[dir="rtl"] span#login_widget {
+  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -8908,6 +9603,9 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
+.modal-header {
+  cursor: move;
+}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -8928,6 +9626,19 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
+[dir="rtl"] .center-nav form.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] .center-nav .navbar-text {
+  float: right;
+}
+[dir="rtl"] .navbar-inner {
+  text-align: right;
+}
+[dir="rtl"] div.text-left {
+  text-align: right;
+}
 /*!
 *
 * IPython tree view
@@ -8944,34 +9655,42 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  text-align: center;
-  vertical-align: middle;
-  display: inline;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
   opacity: 0;
   z-index: 2;
-  width: 12ex;
-  margin-right: -12ex;
+}
+.alternate_upload .btn-xs > input.fileinput {
+  margin: -1px -5px;
 }
 .alternate_upload .btn-upload {
+  position: relative;
   height: 22px;
+}
+::-webkit-file-upload-button {
+  cursor: pointer;
 }
 /**
  * Primary styles
  *
  * Author: Jupyter Development Team
  */
-[dir="rtl"] #tabs li {
-  float: right;
-}
 ul#tabs {
   margin-bottom: 4px;
-}
-[dir="rtl"] ul#tabs {
-  margin-right: 0px;
 }
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
+}
+[dir="rtl"] ul#tabs.nav-tabs > li {
+  float: right;
+}
+[dir="rtl"] ul#tabs.nav.nav-tabs {
+  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -8991,15 +9710,13 @@ ul.breadcrumb span {
 .list_toolbar .tree-buttons {
   padding-top: 1px;
 }
-[dir="rtl"] .list_toolbar .tree-buttons {
+[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
   float: left !important;
+  float: left;
 }
-[dir="rtl"] .list_toolbar .pull-right {
-  padding-top: 1px;
-  float: left !important;
-}
-[dir="rtl"] .list_toolbar .pull-left {
-  float: right !important;
+[dir="rtl"] .list_toolbar .col-sm-4,
+[dir="rtl"] .list_toolbar .col-sm-8 {
+  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9055,7 +9772,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: baseline;
+  vertical-align: text-bottom;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9065,6 +9782,9 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
+}
+[dir="rtl"] .list_item > div input {
+  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9080,6 +9800,14 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
+}
+.item_modified {
+  margin-right: 7px;
+  margin-left: 7px;
+}
+[dir="rtl"] .item_modified.pull-right {
+  float: left !important;
+  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9108,6 +9836,14 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
+[dir="rtl"] .item_buttons.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .item_buttons .kernel-name {
+  margin-left: 7px;
+  float: right;
+}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9133,18 +9869,32 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
+.sort_button {
+  display: inline-block;
+  padding-left: 7px;
+}
+[dir="rtl"] .sort_button.pull-right {
+  float: left !important;
+  float: left;
+}
 #tree-selector {
   padding-right: 0px;
-}
-[dir="rtl"] #tree-selector a {
-  float: right;
 }
 #button-select-all {
   min-width: 50px;
 }
+[dir="rtl"] #button-select-all.btn {
+  float: right ;
+}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
+  margin-top: 2px;
+  height: 16px;
+}
+[dir="rtl"] #select-all.pull-left {
+  float: right !important;
+  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9162,6 +9912,12 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
+.folder_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.folder_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9178,6 +9934,12 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
+}
+.notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9197,6 +9959,12 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
+.running_notebook_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.running_notebook_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9214,6 +9982,12 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
+.file_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.file_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9228,8 +10002,11 @@ ul#new-menu {
   left: auto;
   right: 0;
 }
-[dir="rtl"] #new-menu {
-  text-align: right;
+#new-menu .dropdown-header {
+  font-size: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 3px;
+  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -9276,9 +10053,6 @@ ul#new-menu {
 #running .panel-group .panel .panel-body .list_container .list_item:last-child {
   border-bottom: 0px;
 }
-[dir="rtl"] #running .col-sm-8 {
-  float: right !important;
-}
 .delete-button {
   display: none;
 }
@@ -9286,6 +10060,12 @@ ul#new-menu {
   display: none;
 }
 .rename-button {
+  display: none;
+}
+.move-button {
+  display: none;
+}
+.download-button {
   display: none;
 }
 .shutdown-button {
@@ -9328,6 +10108,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -9342,6 +10128,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
+}
+.dirty-indicator-dirty.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-dirty.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -9358,6 +10150,12 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
+.dirty-indicator-clean.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean.fa-pull-right {
+  margin-left: .3em;
+}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -9372,6 +10170,12 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
+}
+.dirty-indicator-clean:before.fa-pull-left {
+  margin-right: .3em;
+}
+.dirty-indicator-clean:before.fa-pull-right {
+  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -9417,14 +10221,132 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
+.CodeMirror-dialog {
+  background-color: #fff;
+}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI colors. */
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
 .ansibold {
   font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -9503,12 +10425,20 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  border-left-width: 1px;
-  padding-left: 5px;
-  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
 }
 div.cell.jupyter-soft-selected {
-  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -9521,27 +10451,39 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected {
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
   border-color: #ababab;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
 }
 @media print {
-  div.cell.selected {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected.jupyter-soft-selected {
-  border-left-width: 0;
-  padding-left: 6px;
-  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
-}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-  border-left-width: 0px;
-  padding-left: 6px;
-  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -9737,7 +10679,9 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  padding: 0.4em;
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -9747,11 +10691,24 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
-  /* .CodeMirror-lines */
-  padding: 0;
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
   border: 0;
   border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
 }
 /*
 
@@ -10005,6 +10962,9 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
+div.output_area .mglyph > img {
+  max-width: none;
+}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -10043,7 +11003,7 @@ div.output_area svg.unconfined {
 }
 div.output_area pre {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 1px 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -10203,39 +11163,35 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
 .rendered_html ul {
   list-style: disc;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ul ul ul {
   list-style: circle;
-  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
-  margin: 0em 2em;
-  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin: 0em 2em;
+  margin-top: 0;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
-  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
-  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -10249,14 +11205,23 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
+  padding: 0px;
+  background-color: #fff;
+}
+.rendered_html code {
+  background-color: #eff0f1;
+}
+.rendered_html p code {
+  padding: 1px 5px;
+}
+.rendered_html pre code {
+  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
-  background-color: #fff;
   color: #000;
   font-size: 100%;
-  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -10264,24 +11229,36 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
+  border: none;
   border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin: 1em 2em;
-}
-.rendered_html td,
-.rendered_html th {
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
-  padding: 4px;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
 }
 .rendered_html th {
   font-weight: bold;
+}
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -10308,6 +11285,15 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
+}
+.rendered_html .alert {
+  margin-bottom: initial;
+}
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] .rendered_html p {
+  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -10362,8 +11348,17 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered .rendered_html td {
+  max-width: none;
+}
 .text_cell.unrendered .text_cell_render {
   display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -10500,6 +11495,28 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+.jupyter-keybindings {
+  padding: 1px;
+  line-height: 24px;
+  border-bottom: 1px solid gray;
+}
+.jupyter-keybindings input {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.jupyter-keybindings i {
+  padding: 6px;
+}
+.well code {
+  background-color: #ffffff;
+  border-color: #ababab;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -10632,6 +11649,152 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
+.tags_button_container {
+  width: 100%;
+  display: flex;
+}
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+}
+.tag-container > * {
+  margin: 0 4px;
+}
+.remove-tag-btn {
+  margin-left: 4px;
+}
+.tags-input {
+  display: flex;
+}
+.cell-tag:last-child:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  /* Fade to background color of cell toolbar */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
+}
+.tags-input > * {
+  margin-left: 4px;
+}
+.cell-tag,
+.tags-input input,
+.tags-input button {
+  display: block;
+  width: 100%;
+  height: 32px;
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 1px;
+  box-shadow: none;
+  width: inherit;
+  font-size: inherit;
+  height: 22px;
+  line-height: 22px;
+  padding: 0px 4px;
+  display: inline-block;
+}
+.cell-tag:focus,
+.tags-input input:focus,
+.tags-input button:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.cell-tag::-moz-placeholder,
+.tags-input input::-moz-placeholder,
+.tags-input button::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+.cell-tag:-ms-input-placeholder,
+.tags-input input:-ms-input-placeholder,
+.tags-input button:-ms-input-placeholder {
+  color: #999;
+}
+.cell-tag::-webkit-input-placeholder,
+.tags-input input::-webkit-input-placeholder,
+.tags-input button::-webkit-input-placeholder {
+  color: #999;
+}
+.cell-tag::-ms-expand,
+.tags-input input::-ms-expand,
+.tags-input button::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+.cell-tag[readonly],
+.tags-input input[readonly],
+.tags-input button[readonly],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  background-color: #eeeeee;
+  opacity: 1;
+}
+.cell-tag[disabled],
+.tags-input input[disabled],
+.tags-input button[disabled],
+fieldset[disabled] .cell-tag,
+fieldset[disabled] .tags-input input,
+fieldset[disabled] .tags-input button {
+  cursor: not-allowed;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button {
+  height: auto;
+}
+select.cell-tag,
+select.tags-input input,
+select.tags-input button {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.cell-tag,
+textarea.tags-input input,
+textarea.tags-input button,
+select[multiple].cell-tag,
+select[multiple].tags-input input,
+select[multiple].tags-input button {
+  height: auto;
+}
+.cell-tag,
+.tags-input button {
+  padding: 0px 4px;
+}
+.cell-tag {
+  background-color: #fff;
+  white-space: nowrap;
+}
+.tags-input input[type=text]:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
 .completions {
   position: absolute;
   z-index: 110;
@@ -10657,16 +11820,28 @@ select[multiple].celltoolbar select {
 .completions select option.context {
   color: #286090;
 }
-#kernel_logo_widget {
-  float: right !important;
-  float: right;
-}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
+}
+[dir="rtl"] #kernel_logo_widget {
+  float: left !important;
+  float: left;
+}
+.modal .modal-body .move-path {
+  display: flex;
+  flex-direction: row;
+  justify-content: space;
+  align-items: center;
+}
+.modal .modal-body .move-path .server-root {
+  padding-right: 20px;
+}
+.modal .modal-body .move-path .path-input {
+  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -10688,11 +11863,41 @@ select[multiple].celltoolbar select {
 #menubar .navbar-collapse {
   clear: left;
 }
+[dir="rtl"] #menubar .navbar-toggle {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-collapse {
+  clear: right;
+}
+[dir="rtl"] #menubar .navbar-nav {
+  float: right;
+}
+[dir="rtl"] #menubar .nav {
+  padding-right: 0px;
+}
+[dir="rtl"] #menubar .navbar-nav > li {
+  float: right;
+}
+[dir="rtl"] #menubar .navbar-right {
+  float: left !important;
+}
+[dir="rtl"] ul.dropdown-menu {
+  text-align: right;
+  left: auto;
+}
+[dir="rtl"] ul#new-menu.dropdown-menu {
+  right: auto;
+  left: 0;
+}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
+}
+[dir="rtl"] i.menu-icon.pull-right {
+  float: left !important;
+  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -10700,6 +11905,17 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a {
+  padding-left: 2.2em;
+}
+[dir="rtl"] ul#help_menu li a i {
+  margin-right: 0;
+  margin-left: -1.2em;
+}
+[dir="rtl"] ul#help_menu li a i.pull-right {
+  float: left !important;
+  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -10709,6 +11925,10 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
+}
+[dir="rtl"] .dropdown-submenu > .dropdown-menu {
+  right: 100%;
+  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -10727,11 +11947,23 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
+.dropdown-submenu > a:after.fa-pull-left {
+  margin-right: .3em;
+}
+.dropdown-submenu > a:after.fa-pull-right {
+  margin-left: .3em;
+}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
+}
+[dir="rtl"] .dropdown-submenu > a:after {
+  float: left;
+  content: "\f0d9";
+  margin-right: 0;
+  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -10748,6 +11980,10 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
+[dir="rtl"] #notification_area {
+  float: left !important;
+  float: left;
+}
 .indicator_area {
   float: right !important;
   float: right;
@@ -10758,6 +11994,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] .indicator_area {
+  float: left !important;
+  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -10775,6 +12015,12 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
+[dir="rtl"] #kernel_indicator {
+  float: left !important;
+  float: left;
+  border-left: 0;
+  border-right: 1px solid;
+}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -10785,6 +12031,10 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
+}
+[dir="rtl"] #modal_indicator {
+  float: left !important;
+  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -10815,6 +12065,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
+.edit_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.edit_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
+}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -10829,6 +12085,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
+}
+.command_mode .modal_indicator:before.fa-pull-left {
+  margin-right: .3em;
+}
+.command_mode .modal_indicator:before.fa-pull-right {
+  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -10845,6 +12107,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
+.kernel_idle_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_idle_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10859,6 +12127,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
+}
+.kernel_busy_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_busy_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -10875,6 +12149,12 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
+.kernel_dead_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_dead_icon:before.fa-pull-right {
+  margin-left: .3em;
+}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10889,6 +12169,12 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
+}
+.kernel_disconnected_icon:before.fa-pull-left {
+  margin-right: .3em;
+}
+.kernel_disconnected_icon:before.fa-pull-right {
+  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -11279,27 +12565,46 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  margin-top: 6px;
+  height: 30px;
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  width: 50%;
+  flex: 1;
 }
 span.save_widget span.filename {
-  height: 1em;
+  height: 100%;
   line-height: 1em;
-  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
+[dir="rtl"] span.save_widget.pull-left {
+  float: right !important;
+  float: right;
+}
+[dir="rtl"] span.save_widget span.filename {
+  margin-left: 0;
+  margin-right: 16px;
+}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
+  white-space: nowrap;
+  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
+    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -11343,6 +12648,9 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
+.toolbar-btn-label {
+  margin-left: 6px;
+}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -11362,6 +12670,10 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
+}
+[dir="rtl"] .btn-group > .btn,
+.btn-group-vertical > .btn {
+  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -11512,6 +12824,10 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
+[dir="rtl"] ul.typeahead-list i {
+  margin-left: 0;
+  margin-right: -10px;
+}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -11520,6 +12836,13 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
+}
+ul.typeahead-list  > li > a.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .typeahead-list {
+  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -11531,10 +12854,19 @@ ul.typeahead-list > li > a {
   outline: none;
 }
 .no-shortcut {
-  display: none;
+  min-width: 20px;
+  color: transparent;
+}
+[dir="rtl"] .no-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
+[dir="rtl"] .command-shortcut.pull-right {
+  float: left !important;
+  float: left;
 }
 .command-shortcut:before {
-  content: "(command)";
+  content: "(command mode)";
   padding-right: 3px;
   color: #777777;
 }
@@ -11543,6 +12875,10 @@ ul.typeahead-list > li > a {
   padding-right: 3px;
   color: #777777;
 }
+[dir="rtl"] .edit-shortcut.pull-right {
+  float: left !important;
+  float: left;
+}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -11550,6 +12886,12 @@ ul.typeahead-list > li > a {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
+}
+[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
+  border-left: none;
+}
+[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
+  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -11675,45 +13017,6 @@ ul.typeahead-list > li > a {
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
-<style type="text/css">
-    
-/* Temporary definitions which will become obsolete with Notebook release 5.0 */
-.ansi-black-fg { color: #3E424D; }
-.ansi-black-bg { background-color: #3E424D; }
-.ansi-black-intense-fg { color: #282C36; }
-.ansi-black-intense-bg { background-color: #282C36; }
-.ansi-red-fg { color: #E75C58; }
-.ansi-red-bg { background-color: #E75C58; }
-.ansi-red-intense-fg { color: #B22B31; }
-.ansi-red-intense-bg { background-color: #B22B31; }
-.ansi-green-fg { color: #00A250; }
-.ansi-green-bg { background-color: #00A250; }
-.ansi-green-intense-fg { color: #007427; }
-.ansi-green-intense-bg { background-color: #007427; }
-.ansi-yellow-fg { color: #DDB62B; }
-.ansi-yellow-bg { background-color: #DDB62B; }
-.ansi-yellow-intense-fg { color: #B27D12; }
-.ansi-yellow-intense-bg { background-color: #B27D12; }
-.ansi-blue-fg { color: #208FFB; }
-.ansi-blue-bg { background-color: #208FFB; }
-.ansi-blue-intense-fg { color: #0065CA; }
-.ansi-blue-intense-bg { background-color: #0065CA; }
-.ansi-magenta-fg { color: #D160C4; }
-.ansi-magenta-bg { background-color: #D160C4; }
-.ansi-magenta-intense-fg { color: #A03196; }
-.ansi-magenta-intense-bg { background-color: #A03196; }
-.ansi-cyan-fg { color: #60C6C8; }
-.ansi-cyan-bg { background-color: #60C6C8; }
-.ansi-cyan-intense-fg { color: #258F8F; }
-.ansi-cyan-intense-bg { background-color: #258F8F; }
-.ansi-white-fg { color: #C5C1B4; }
-.ansi-white-bg { background-color: #C5C1B4; }
-.ansi-white-intense-fg { color: #A1A6B2; }
-.ansi-white-intense-bg { background-color: #A1A6B2; }
-
-.ansi-bold { font-weight: bold; }
-
-    </style>
 
 
 <style type="text/css">
@@ -11747,7 +13050,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11772,16 +13075,14 @@ div#notebook {
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Bonus1:-Parallel-Algorithms">Bonus1: Parallel Algorithms<a class="anchor-link" href="#Bonus1:-Parallel-Algorithms">&#182;</a></h1><h3 id="Name:-[Your-Name?]">Name: [Your-Name?]<a class="anchor-link" href="#Name:-[Your-Name?]">&#182;</a></h3>
+<h1 id="Bonus1:-Parallel-Algorithms">Bonus1: Parallel Algorithms<a class="anchor-link" href="#Bonus1:-Parallel-Algorithms">&#182;</a></h1><h3 id="Name:-Ayman-Elkfrawy">Name: Ayman Elkfrawy<a class="anchor-link" href="#Name:-Ayman-Elkfrawy">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="0.-You-will-do-the-following:">0. You will do the following:<a class="anchor-link" href="#0.-You-will-do-the-following:">&#182;</a></h2><ol>
 <li><p>Read the lecture note: <a href="https://github.com/wangshusen/DeepLearning/blob/master/LectureNotes/Parallel/Parallel.pdf">click here</a></p>
@@ -11795,11 +13096,11 @@ div#notebook {
 <li>The HTML file must contain <strong>the code</strong> and <strong>the output after execution</strong>.</li>
 </ul>
 </li>
-<li><p>Upload this .HTML file to your Google Drive, Dropbox, or your Github repo. (If submit to Google Drive or Dropbox, you must make the file open-access.)</p>
+<li><p>Upload this .HTML file to your Google Drive, Dropbox, or your Github repo. (If it is submitted to Google Drive or Dropbox, you must make the file open-access.)</p>
 </li>
 <li><p>Submit the link to this .HTML file to Canvas.</p>
 <ul>
-<li>Example: <a href="https://github.com/wangshusen/CS583-2019F/blob/master/homework/Bonus1/Bonus1.html">https://github.com/wangshusen/CS583-2019F/blob/master/homework/Bonus1/Bonus1.html</a></li>
+<li>Example: <a href="https://github.com/wangshusen/CS583-2020S/blob/master/homework/Bonus1/Bonus1.html">https://github.com/wangshusen/CS583-2020S/blob/master/homework/Bonus1/Bonus1.html</a></li>
 </ul>
 </li>
 </ol>
@@ -11807,9 +13108,21 @@ div#notebook {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="1.-Data-processing">1. Data processing<a class="anchor-link" href="#1.-Data-processing">&#182;</a></h1><ul>
 <li>Download the Diabete dataset from <a href="https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/diabetes">https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/diabetes</a></li>
@@ -11821,8 +13134,7 @@ div#notebook {
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.1.-Load-the-data">1.1. Load the data<a class="anchor-link" href="#1.1.-Load-the-data">&#182;</a></h2>
 </div>
@@ -11830,10 +13142,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">datasets</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 
 <span class="n">x_sparse</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_svmlight_file</span><span class="p">(</span><span class="s1">&#39;diabetes&#39;</span><span class="p">)</span>
@@ -11843,14 +13155,32 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of y: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x: (768, 8)
+Shape of y: (768,)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.2.-Partition-to-training-and-test-sets">1.2. Partition to training and test sets<a class="anchor-link" href="#1.2.-Partition-to-training-and-test-sets">&#182;</a></h2>
 </div>
@@ -11858,22 +13188,16 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># partition the data to training and test sets</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">n_train</span> <span class="o">=</span> <span class="mi">640</span>
-<span class="n">n_test</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">n_train</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
-<span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="n">train_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n_train</span><span class="p">]</span>
-<span class="n">test_indices</span> <span class="o">=</span> <span class="n">rand_indices</span><span class="p">[</span><span class="n">n_train</span><span class="p">:</span><span class="n">n</span><span class="p">]</span>
+<span class="n">split_random_state</span> <span class="o">=</span> <span class="mi">376</span>
 
-<span class="n">x_train</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">train_indices</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">x_test</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">test_indices</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">y_train</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_indices</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_train</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y_test</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_indices</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n_test</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.16</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of x_train: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of x_test: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
@@ -11881,22 +13205,41 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of y_test: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">y_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x_train: (645, 8)
+Shape of x_test: (123, 8)
+Shape of y_train: (645, 1)
+Shape of y_test: (123, 1)
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.3.-Feature-scaling">1.3. Feature scaling<a class="anchor-link" href="#1.3.-Feature-scaling">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Use the standardization to trainsform both training and test features</p>
 
@@ -11905,7 +13248,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Standardization</span>
@@ -11929,14 +13272,36 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test mean = 
+[[-0.27864308  0.03758729 -0.02998267  0.10722333  0.106165    0.01002021
+  -0.00890055 -0.11505426]]
+test std = 
+[[0.82651628 1.14970787 0.99312144 1.01496174 1.11771912 1.17845981
+  0.81919962 0.99679393]]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
+</div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="1.4.-Add-a-dimension-of-all-ones">1.4. Add a dimension of all ones<a class="anchor-link" href="#1.4.-Add-a-dimension-of-all-ones">&#182;</a></h2>
 </div>
@@ -11944,7 +13309,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">n_train</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span>
@@ -11957,7 +13322,526 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Shape of x_test: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">x_test</span><span class="o">.</span><span class="n">shape</span><span class="p">))</span>
 </pre></div>
 
+    </div>
 </div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Shape of x_train: (645, 9)
+Shape of x_test: (123, 9)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">VERBOSE</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">class</span> <span class="nc">Worker</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">worker_id</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d_features</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">d</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">worker_id</span> <span class="o">=</span> <span class="n">worker_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Created&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_index</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_objs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sgd_obj_acc</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># accumulated SGD objective value</span>
+
+    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">VERBOSE</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Worker (</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">worker_id</span><span class="si">}</span><span class="s1">): </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">set_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Received Updated Params&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">w</span>
+
+    <span class="k">def</span> <span class="nf">sgd_grad_objective</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lam</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Calculating SGD grad/loss&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_index</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">:</span>  <span class="c1"># one epoch is done</span>
+            <span class="c1"># Shuffle the samples</span>
+            <span class="n">rand_indices</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="n">rand_indices</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="n">rand_indices</span><span class="p">,</span> <span class="p">:]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">epoch_objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sgd_obj_acc</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span><span class="p">)</span>  <span class="c1"># add per epoch obj value</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sgd_obj_acc</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">last_index</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="n">xi</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">last_index</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="n">yi</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">last_index</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_index</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">yx</span> <span class="o">=</span> <span class="n">yi</span> <span class="o">*</span> <span class="n">xi</span>
+        <span class="n">yxw</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">yx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">))</span>
+
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">yxw</span><span class="p">))</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">lam</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sgd_obj_acc</span> <span class="o">+=</span> <span class="n">obj</span>
+
+        <span class="n">g</span> <span class="o">=</span> <span class="o">-</span><span class="n">yx</span><span class="o">.</span><span class="n">T</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">yxw</span><span class="p">))</span> <span class="o">+</span> <span class="n">lam</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
+
+        <span class="k">return</span> <span class="n">g</span><span class="p">,</span> <span class="n">obj</span>
+
+    <span class="k">def</span> <span class="nf">gd_grad_objective</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lam</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Calculating GD grad/loss&#39;</span><span class="p">)</span>
+        <span class="n">yx</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">yxw</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">yx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">yxw</span><span class="p">)))</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">loss</span> <span class="o">+</span> <span class="n">lam</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epoch_objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>  <span class="c1"># add per epoch obj value</span>
+
+        <span class="n">g_vec</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">yx</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">numpy</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">yxw</span><span class="p">))</span>
+        <span class="n">grad</span> <span class="o">=</span> <span class="o">-</span><span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">g_vec</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">d_features</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">lam</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
+        <span class="k">return</span> <span class="n">grad</span><span class="p">,</span> <span class="n">obj</span>
+
+    <span class="k">def</span> <span class="nf">fed_avg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_local_grads</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">learn_rate</span><span class="p">,</span> <span class="n">lam</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Performing FedAvg&#39;</span><span class="p">)</span>
+        <span class="n">objval</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_local_grads</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;sgd&#39;</span><span class="p">:</span>
+                <span class="n">g</span><span class="p">,</span> <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sgd_grad_objective</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">g</span><span class="p">,</span> <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">gd_grad_objective</span><span class="p">(</span><span class="n">lam</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">-=</span> <span class="n">learn_rate</span> <span class="o">*</span> <span class="n">g</span>
+            <span class="n">objval</span> <span class="o">+=</span> <span class="n">obj</span>
+
+        <span class="n">objval</span> <span class="o">/=</span> <span class="n">n_local_grads</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">objval</span>
+
+
+<span class="k">class</span> <span class="nc">Server</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m_workers</span> <span class="o">=</span> <span class="n">m</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_samples</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">d_features</span> <span class="o">=</span> <span class="n">d</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">d</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Created&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">VERBOSE</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Server: </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">broadcast</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Broadcasting&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
+
+    <span class="k">def</span> <span class="nf">aggregate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">objvals</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;Aggregating&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">d_features</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">m_workers</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">+=</span> <span class="n">params</span><span class="p">[</span><span class="n">worker</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">+=</span> <span class="n">objvals</span><span class="p">[</span><span class="n">worker</span><span class="p">]</span>
+
+        <span class="c1"># Average results</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m_workers</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">/=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m_workers</span>
+
+
+<span class="k">def</span> <span class="nf">create_server_workers</span><span class="p">(</span><span class="n">m_workers</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">n_samples</span><span class="p">,</span> <span class="n">d_features</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">n_samples</span> <span class="o">/</span> <span class="n">m_workers</span><span class="p">)</span>
+    <span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">(</span><span class="n">m_workers</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">d_features</span><span class="p">)</span>
+    <span class="n">workers</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m_workers</span><span class="p">):</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">s</span><span class="p">))</span>
+        <span class="n">worker</span> <span class="o">=</span> <span class="n">Worker</span><span class="p">(</span><span class="s1">&#39;worker&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">x</span><span class="p">[</span><span class="n">indices</span><span class="p">,</span> <span class="p">:],</span> <span class="n">y</span><span class="p">[</span><span class="n">indices</span><span class="p">,</span> <span class="p">:])</span>
+        <span class="n">workers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">worker</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">server</span><span class="p">,</span> <span class="n">workers</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">run_fed_avg</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">m_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">server</span><span class="p">,</span> <span class="n">workers</span> <span class="o">=</span> <span class="n">create_server_workers</span><span class="p">(</span><span class="n">m_workers</span><span class="p">,</span> <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+    <span class="n">iterations_per_epoch</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;sgd&#39;</span><span class="p">:</span>  <span class="c1"># Iterate more for SGD to achieve target epochs</span>
+        <span class="n">iterations_per_epoch</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">q</span> <span class="o">*</span> <span class="n">m_workers</span><span class="p">))</span>
+
+    <span class="n">adjusted_epoch</span> <span class="o">=</span> <span class="n">max_epoch</span>
+    <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;gd&#39;</span><span class="p">:</span>  <span class="c1"># Adjust max_epochs in case GD with q &gt; 1</span>
+        <span class="n">adjusted_epoch</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">max_epoch</span> <span class="o">/</span> <span class="n">q</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">adjusted_epoch</span><span class="p">):</span>
+        <span class="n">objval</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">iteration</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations_per_epoch</span><span class="p">):</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">broadcast</span><span class="p">()</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m_workers</span><span class="p">):</span>
+                <span class="n">workers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+
+            <span class="n">params</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">objs</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="n">workers</span><span class="p">:</span>
+                <span class="n">w_i</span><span class="p">,</span> <span class="n">obj_i</span> <span class="o">=</span> <span class="n">worker</span><span class="o">.</span><span class="n">fed_avg</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">algorithm</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">lam</span><span class="p">)</span>
+                <span class="n">params</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w_i</span><span class="p">)</span>
+                <span class="n">objs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">obj_i</span><span class="p">)</span>
+
+            <span class="n">server</span><span class="o">.</span><span class="n">aggregate</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">objs</span><span class="p">)</span>
+            <span class="n">objval</span> <span class="o">+=</span> <span class="n">server</span><span class="o">.</span><span class="n">obj</span>
+
+        <span class="k">if</span> <span class="n">algorithm</span> <span class="o">==</span> <span class="s1">&#39;sgd&#39;</span><span class="p">:</span>
+            <span class="n">alpha</span> <span class="o">*=</span> <span class="mf">0.9</span>
+
+        <span class="n">objval</span> <span class="o">=</span> <span class="n">objval</span> <span class="o">/</span> <span class="n">iterations_per_epoch</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Objective function value = &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">objval</span><span class="p">))</span>
+
+    <span class="n">objvals</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">max_epoch</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">worker</span> <span class="ow">in</span> <span class="n">workers</span><span class="p">:</span>
+        <span class="n">objvals</span> <span class="o">+=</span> <span class="n">worker</span><span class="o">.</span><span class="n">epoch_objs</span><span class="p">[:</span> <span class="n">max_epoch</span><span class="p">]</span>
+    <span class="n">objvals</span> <span class="o">/=</span> <span class="n">m_workers</span>
+
+    <span class="k">return</span> <span class="n">server</span><span class="o">.</span><span class="n">w</span><span class="p">,</span> <span class="n">objvals</span>
+
+
+<span class="n">_</span><span class="p">,</span> <span class="n">gd_1q_objvals</span> <span class="o">=</span> <span class="n">run_fed_avg</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">m_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------&#39;</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">gd_8q_objvals</span> <span class="o">=</span> <span class="n">run_fed_avg</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;gd&#39;</span><span class="p">,</span> <span class="n">m_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------&#39;</span><span class="p">)</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">sgd_1q_objvals</span> <span class="o">=</span> <span class="n">run_fed_avg</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">,</span> <span class="n">m_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-------------------------&#39;</span><span class="p">)</span>
+<span class="n">w_sgd8</span><span class="p">,</span> <span class="n">sgd_8q_objvals</span> <span class="o">=</span> <span class="n">run_fed_avg</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">,</span> <span class="n">m_workers</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">lam</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_epoch</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Objective function value = 0.6751081205911709
+Objective function value = 0.6348391633418111
+Objective function value = 0.6056000297849438
+Objective function value = 0.5838070309712494
+Objective function value = 0.5671373789394729
+Objective function value = 0.5540836983613195
+Objective function value = 0.543650219585911
+Objective function value = 0.5351632771130821
+Objective function value = 0.5281555433526319
+Objective function value = 0.5222948578792821
+Objective function value = 0.5173397115710356
+Objective function value = 0.5131108054301742
+Objective function value = 0.5094724728676128
+Objective function value = 0.5063202787943275
+Objective function value = 0.5035725689721365
+Objective function value = 0.5011645981698157
+Objective function value = 0.49904437521072315
+Objective function value = 0.49716967248177035
+Objective function value = 0.49550583911968427
+Objective function value = 0.4940241780270924
+Objective function value = 0.4927007245775833
+Objective function value = 0.491515315660208
+Objective function value = 0.49045087145283073
+Objective function value = 0.48949283506867747
+Objective function value = 0.4886287307887317
+Objective function value = 0.48784781238897423
+Objective function value = 0.4871407806548414
+Objective function value = 0.48649955456678406
+Objective function value = 0.48591708451834703
+Objective function value = 0.4853871987476249
+Objective function value = 0.4849044762345655
+Objective function value = 0.48446414085402645
+Objective function value = 0.48406197272643864
+Objective function value = 0.4836942335789768
+Objective function value = 0.4833576035945761
+Objective function value = 0.4830491277372215
+Objective function value = 0.48276616993824106
+Objective function value = 0.4825063738379807
+Objective function value = 0.48226762902095355
+Objective function value = 0.4820480418757198
+Objective function value = 0.4818459103648531
+Objective function value = 0.4816597021140778
+Objective function value = 0.4814880353295823
+Objective function value = 0.4813296621336736
+Objective function value = 0.4811834539752135
+Objective function value = 0.4810483888256625
+Objective function value = 0.48092353991641584
+Objective function value = 0.4808080658102661
+Objective function value = 0.48070120163073726
+Objective function value = 0.4806022512988563
+-------------------------
+Objective function value = 0.5869658458095804
+Objective function value = 0.5119992072390431
+Objective function value = 0.4932478482924061
+Objective function value = 0.48601384588007024
+Objective function value = 0.48273740747340477
+Objective function value = 0.4811212908511981
+Objective function value = 0.48028009111359843
+-------------------------
+Objective function value = 0.5274586363471891
+Objective function value = 0.5320823460850717
+Objective function value = 0.5295452067498242
+Objective function value = 0.5117377600478895
+Objective function value = 0.5246676086461697
+Objective function value = 0.5097497046748608
+Objective function value = 0.5054364435013021
+Objective function value = 0.5047114842729777
+Objective function value = 0.4976192143651187
+Objective function value = 0.5095009750215429
+Objective function value = 0.49576122350605284
+Objective function value = 0.497884060540972
+Objective function value = 0.49230229328536823
+Objective function value = 0.5065237153791322
+Objective function value = 0.4729135291654071
+Objective function value = 0.5071730562665799
+Objective function value = 0.4823451516079191
+Objective function value = 0.4926144029821113
+Objective function value = 0.47752011824067053
+Objective function value = 0.5035261378163657
+Objective function value = 0.48210754732069655
+Objective function value = 0.49436367288692057
+Objective function value = 0.4640785633189836
+Objective function value = 0.5008331614970402
+Objective function value = 0.4657142662073733
+Objective function value = 0.517760355994224
+Objective function value = 0.4687258173250918
+Objective function value = 0.48265782465746887
+Objective function value = 0.48387257432177083
+Objective function value = 0.48087321340179057
+Objective function value = 0.49107734509884937
+Objective function value = 0.4630438340172601
+Objective function value = 0.48153943545153843
+Objective function value = 0.4862466902028828
+Objective function value = 0.4956091891582877
+Objective function value = 0.44954971478502764
+Objective function value = 0.48984878235730267
+Objective function value = 0.4855388751170112
+Objective function value = 0.4895292692076568
+Objective function value = 0.47048960094068953
+Objective function value = 0.4843717629595075
+Objective function value = 0.47050990603991777
+Objective function value = 0.48249367254099607
+Objective function value = 0.48879407249288687
+Objective function value = 0.4695839404311515
+Objective function value = 0.49879437215817823
+Objective function value = 0.48510273297891265
+Objective function value = 0.4647750371806128
+Objective function value = 0.4849783231702463
+Objective function value = 0.44685326932673536
+-------------------------
+Objective function value = 0.5318071303376785
+Objective function value = 0.5283010541373991
+Objective function value = 0.5330227108809027
+Objective function value = 0.5087221371711137
+Objective function value = 0.509206946272782
+Objective function value = 0.5081230668509049
+Objective function value = 0.5053001811282584
+Objective function value = 0.5165341581690245
+Objective function value = 0.4951811882858285
+Objective function value = 0.5062632699379149
+Objective function value = 0.5148805682504846
+Objective function value = 0.4802510412715006
+Objective function value = 0.4824024763982795
+Objective function value = 0.52242537946219
+Objective function value = 0.47570128215853175
+Objective function value = 0.5061556346375611
+Objective function value = 0.4871984594610224
+Objective function value = 0.5013150313045841
+Objective function value = 0.46855902799960925
+Objective function value = 0.49322566072671364
+Objective function value = 0.49717380931617017
+Objective function value = 0.4736261077221973
+Objective function value = 0.48957423212232054
+Objective function value = 0.4781817488050239
+Objective function value = 0.4876596132012749
+Objective function value = 0.48351472964005043
+Objective function value = 0.4820820861913262
+Objective function value = 0.4866418032532507
+Objective function value = 0.49771672919409243
+Objective function value = 0.46564028333048296
+Objective function value = 0.4996772800345244
+Objective function value = 0.4626901491739585
+Objective function value = 0.4960838727586923
+Objective function value = 0.48459834183544426
+Objective function value = 0.4699408760473875
+Objective function value = 0.48751903178426853
+Objective function value = 0.48424831541404306
+Objective function value = 0.47976762167589004
+Objective function value = 0.48176505476809484
+Objective function value = 0.47028625053332884
+Objective function value = 0.47176109564489466
+Objective function value = 0.4779412721882079
+Objective function value = 0.49640966162657596
+Objective function value = 0.47697558552025604
+Objective function value = 0.47527185404338956
+Objective function value = 0.4804943812416613
+Objective function value = 0.4821006063242712
+Objective function value = 0.47714229707411804
+Objective function value = 0.4880618359026727
+Objective function value = 0.4682969923457958
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+<span class="n">epochs</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">gd_1q_objvals</span><span class="p">))</span>
+
+<span class="n">line0</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">gd_1q_objvals</span><span class="p">,</span> <span class="s1">&#39;--b&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">line1</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">gd_8q_objvals</span><span class="p">,</span> <span class="s1">&#39;-r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">line2</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">sgd_1q_objvals</span><span class="p">,</span> <span class="s1">&#39;--g&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">line3</span><span class="p">,</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">epochs</span><span class="p">,</span> <span class="n">sgd_8q_objvals</span><span class="p">,</span> <span class="s1">&#39;-m&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Epochs&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Objective Value&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">line0</span><span class="p">,</span> <span class="n">line1</span><span class="p">,</span> <span class="n">line2</span><span class="p">,</span> <span class="n">line3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;GD Q=1&#39;</span><span class="p">,</span> <span class="s1">&#39;GD Q=8&#39;</span><span class="p">,</span> <span class="s1">&#39;SGD Q=1&#39;</span><span class="p">,</span> <span class="s1">&#39;SGD Q=8&#39;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+    <span class="n">xw</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">xw</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">f</span>
+
+<span class="c1"># evaluate training error using SGD Q=8 params</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">w_sgd8</span>
+<span class="n">f_train</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">x_train</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">f_train</span> <span class="o">-</span> <span class="n">y_train</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">error_train</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Training classification error is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">error_train</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training classification error is 0.22790697674418606
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># evaluate test error</span>
+<span class="n">f_test</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">x_test</span><span class="p">)</span>
+<span class="n">diff</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">f_test</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="n">error_test</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test classification error is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">error_test</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Test classification error is 0.21138211382113822
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
